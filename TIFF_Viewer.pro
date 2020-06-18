@@ -6,6 +6,11 @@
 
 QT       += core gui
 
+QT += testlib
+CONFIG += testcase
+
+CONFIG += c++1z
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = TIFF_Viewer
@@ -25,10 +30,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    tiffparser.cpp \
+    TestTIFFParser.cpp \
+    utils.cpp \
+    ifd.cpp \
+    directoryentry.cpp \
+    ihasoffset.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    tiffparser.h \
+    TestTIFFParser.h \
+    definesandenums.h \
+    utils.h \
+    ifd.h \
+    directoryentry.h \
+    ihasoffset.h
 
 FORMS += \
         mainwindow.ui
